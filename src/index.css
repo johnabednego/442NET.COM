@@ -1,3 +1,63 @@
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #ffc000;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+  }
+  .button::after{
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: #ffc000;
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+  }
+  .button:hover::before, .button:hover::after {
+    width: 100%;
+    transition: 800ms ease all;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 3s forwards;
+  }
+  
+  .fade-out-left {
+    animation: fadeOutLeft 3s forwards;
+  }
+  
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
