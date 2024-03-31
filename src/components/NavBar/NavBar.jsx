@@ -79,7 +79,7 @@ const NavBar = () => {
         <div className=' fixed top-0 w-full h-[120px] bg-[#011B2B] flex items-center justify-between px-[50px] py-[20px]'>
             {/**Logo and Name*/}
             <div onClick={() => navigate('/')} className=' cursor-pointer w-auto items-center justify-center  flex flex-col gap-[17px]'>
-                <img src={logo} alt="logo" className=' w-[50px] h-[50px] rounded-full shadow-logo' />
+                <img src={logo} alt="logo" className=' hover:rotate-45 transform duration-300 w-[50px] h-[50px] rounded-full shadow-logo' />
                 <h1 className='text-[12px] text-[#01FFFF]'>442NET.COM</h1>
             </div>
 
@@ -144,7 +144,7 @@ const NavBar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='fixed w-full h-full inset-0 bg-[#011B2B] opacity-70'></div>
+                        <div onClick={toggleMenu} className=' cursor-pointer fixed w-full h-full inset-0 bg-[#011B2B] opacity-70'></div>
                     </div>
                     : null
             }
