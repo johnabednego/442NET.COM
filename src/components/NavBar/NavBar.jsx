@@ -12,7 +12,7 @@ const NavBar = () => {
         { name: "Academies and Clubs", link: "/academies&clubs" },
         { name: "Players", link: "/players" },
         { name: "Personnel", link: "/personnel" },
-        { name: "Tournaments", link: "/tournaments" }
+        { name: "Tournaments", link: "/tournaments" },
     ]
     const [category, setCategory] = useState("Category")
     const [open, setOpen] = useState(false)
@@ -76,7 +76,7 @@ const NavBar = () => {
         }
     })
     return (
-        <div className=' fixed top-0 w-full h-[120px] bg-[#011B2B] flex items-center justify-between px-[50px] py-[20px]'>
+        <div className=' z-30 fixed top-0 w-full h-[120px] bg-[#011B2B] flex items-center justify-between px-[20px] xm:px-[30px] sm:px-[50px] py-[20px]'>
             {/**Logo and Name*/}
             <div onClick={() => navigate('/')} className=' cursor-pointer w-auto items-center justify-center  flex flex-col gap-[17px]'>
                 <img src={logo} alt="logo" className=' hover:rotate-45 transform duration-300 w-[50px] h-[50px] rounded-full shadow-logo' />
@@ -98,7 +98,7 @@ const NavBar = () => {
 
             {/**Category Drop Down */}
             {open ?
-                <div onClick={hideModal} className='fixed cursor-pointer'>
+                <div onClick={hideModal} className=' hidden md:flex flex-col fixed cursor-pointer'>
 
                     <div data-aos="zoom-in" data-aos-duration="3000" id='modal' className={` z-50 text-[18px] w-auto px-[40px] py-[30px] fixed ${category === "Academies and Clubs" ? "right-[280px] " : "right-[120px] "} top-[80px] flex flex-col gap-[30px] rounded-[5px] bg-[#011B2B] shadow-dropDown`}>
                         {options?.filter(option => option.name !== category)?.map(option => {
