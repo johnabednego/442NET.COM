@@ -12,14 +12,13 @@ const AnimatedCounter = ({ targetNumber }) => {
         if (inView) {
             let start = 0;
             let duration = 3000; // Total duration of the counter animation in milliseconds
-            const stepTime = duration / targetNumber;
-
             if (targetNumber < 10) {
                 duration = 500;
             }
             else if (targetNumber < 20) {
                 duration = 1000;
             }
+            const stepTime = duration / targetNumber;
 
             // Clear previous interval if exists
             const interval = setInterval(() => {
