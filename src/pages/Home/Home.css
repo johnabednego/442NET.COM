@@ -29,24 +29,62 @@
   }
 
 
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 /* Add this to your styles.css or equivalent */
 .main_circle:hover .circle {
     @apply animate-bounce; 
     @apply z-0;
   }
+
+
+
+  .react-multi-carousel-item{
+    display: flex;
+    justify-content: center;
+  }
+  .slider {
+    width: fit-content !important;
+    padding: 5px !important;
+    margin:0 20px;
+    overflow:"hidden";
+  }
+  
+  .react-multiple-carousel__arrow{
+    z-index: 10 !important;
+    background: #011B2B !important;
+  }
+  .react-multiple-carousel__arrow--left{
+    left: calc(1% + 1px) !important;
+  }
+  .react-multiple-carousel__arrow--right{
+    right: calc(1% + 1px) !important;
+  }
+  .react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .react-multiple-carousel__arrow{
+      min-width: 30px !important;
+      min-height: 30px !important;
+    }
+    .react-multiple-carousel__arrow::before{
+      font-size: 16px !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .react-multiple-carousel__arrow{
+      min-width: 35px !important;
+      min-height: 35px !important;
+    }
+    .react-multiple-carousel__arrow::before{
+      font-size: 18px !important;
+    }
+  }
+  
+  /* .custom-dot-list-style button{
+  border: none;
+  }
+  .react-multi-carousel-dot.react-multi-carousel-dot--active button{
+  background: #011B2B !important;
+  } */
