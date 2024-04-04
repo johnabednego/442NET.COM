@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import AnimatedCounter from './AnimatedCounter'
+import AnimatedCounter from '../../components/AnimatedCounter/AnimatedCounter'
 
 const Categories = () => {
     const navigate = useNavigate()

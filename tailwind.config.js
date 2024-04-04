@@ -13,6 +13,7 @@ export default {
         button:'inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1)',
         dropDown:'inset 2px 2px 2px 0px rgba(1, 255, 255, .5), 2px 2px 2px 0px rgba(1, 255, 255, .5)',
         category: '0 4px 4px 0 rgba(1, 255, 255, 1)',
+        mainCategory: 'inset 0 4px 4px 0 rgba(1, 255, 255, 1)',
         ourFriends: '0 4px 4px 0 rgba(1, 27, 43, 1)',
       },
       screens: {

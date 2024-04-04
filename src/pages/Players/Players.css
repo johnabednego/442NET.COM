@@ -1,0 +1,4 @@
+/* Hovering effect */
+.player_main_circle:hover .player_circle {
+    @apply scale-105; 
+  }
