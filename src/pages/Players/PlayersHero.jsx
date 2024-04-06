@@ -13,7 +13,7 @@ const PlayersHero = () => {
                 <div className=' player_main_circle flex flex-col'>
                     <div className=' player_circle animate-spin  px-[2px] z-20  w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex flex-col gap-4 items-center justify-center text-center rounded-full bg-[#011B2B] shadow-mainCategory '>
                     </div>
-                    <div className=' z-[25] absolute  w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex flex-col gap-4 items-center justify-center text-center font-medium text-[16px] md:text-[20px] '>
+                    <div className=' -mt-4 z-[25] absolute  w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex flex-col gap-4 items-center justify-center text-center font-medium text-[16px] md:text-[20px] '>
                         <AnimatedCounter targetNumber={1246} />
                         <h1 className=' text-[#FFFFFF]'>Football Players</h1>
                     </div>
