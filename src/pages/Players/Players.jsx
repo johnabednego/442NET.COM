@@ -5,6 +5,7 @@ import Title from '../../components/Title/Title'
 import PlayersHero from './PlayersHero'
 import "./Players.css"
 import PlayerCarousel from './PlayerCarousel'
+import FilterPlayers from './FilterPlayers'
 
 const Players = () => {
     return (
@@ -13,6 +14,7 @@ const Players = () => {
             <Title />
             <PlayersHero />
             <PlayerCarousel/>
+            <FilterPlayers/>
             <Footer />
         </div>
     )

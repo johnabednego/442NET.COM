@@ -1,34 +1,3 @@
-  /** Repeat */
-  .button1::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: #011B2B;
-    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
-  }
-  .button1::after{
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 0;
-    background: #011B2B;
-    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
-    transition: 400ms ease all;
-  }
-  .button1:hover::before, .button1:hover::after {
-    width: 100%;
-    transition: 800ms ease all;
-  }
-
-
 /* Add this to your styles.css or equivalent */
 .main_circle:hover .circle {
     @apply animate-bounce; 
