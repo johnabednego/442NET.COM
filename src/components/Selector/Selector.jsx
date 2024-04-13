@@ -70,7 +70,7 @@ const Selector = ({ options, item, setItem, placeholder }) => {
   }, [inputValue, options]);
 
   return (
-    <div ref={selectorRef} className="sm:w-[12.75rem] cursor-pointer">
+    <div ref={selectorRef} className="w-[12.75rem] cursor-pointer">
       <div
         onClick={() => {
           handleOpen(!open)
@@ -96,7 +96,7 @@ const Selector = ({ options, item, setItem, placeholder }) => {
             <ul
 
               id='modal'
-              className={` ${!open ? "hidden" : ""} rounded-[20px] mt-2 w-[60%] sm:w-[12.75rem] absolute bg-white overflow-y-auto z-[25] shadow-net ${open ? data?.length < 6 ? "max-h-fit" : "h-[190px]" : "max-h-0"}`}
+              className={` ${!open ? "hidden" : ""} rounded-[20px] mt-2 w-[12.75rem] absolute bg-white overflow-y-auto z-[25] shadow-net ${open ? data?.length < 6 ? "max-h-fit" : "h-[190px]" : "max-h-0"}`}
             >
               {data && data.length > 0 ? data?.map((item) => (
                 <li
