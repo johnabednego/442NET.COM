@@ -1,19 +1,28 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BiChevronDown } from "react-icons/bi";
 
-const Selector = ({ options, setItem, placeholder }) => {
+const Selector = ({ options, item, setItem, placeholder }) => {
   const [data, setData] = useState(options);
   const [inputValue, setInputValue] = useState("");
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
   const selectorRef = useRef(null);
 
+
+
+
+  const handleOpen = (value) =>{
+    setOpen(value)
+    setData(options)
+  }
+
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
     setItem(value)
+    setSelected(value)
     if (value) {
-      setOpen(true)
+      handleOpen(true)
     }
   };
 
@@ -21,7 +30,7 @@ const Selector = ({ options, setItem, placeholder }) => {
     const modal = document.getElementById('modal');
     // Check if the clicked element is outside of the modal
     if (event.target !== modal && !modal.contains(event.target)) {
-      setOpen(!open)
+      handleOpen(!open)
     }
   }
 
@@ -41,7 +50,7 @@ const Selector = ({ options, setItem, placeholder }) => {
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (selectorRef.current && !selectorRef.current.contains(event.target)) {
-        setOpen(false);
+        handleOpen(false);
       }
     };
 
@@ -64,14 +73,14 @@ const Selector = ({ options, setItem, placeholder }) => {
     <div ref={selectorRef} className="sm:w-[12.75rem] cursor-pointer">
       <div
         onClick={() => {
-          setOpen(!open)
+          handleOpen(!open)
         }}
         className={` px-[12px] border-solid border-[1px] border-[#011B2B] text-[1.125rem] shadow-input rounded-[2.5rem] h-[2.9rem] sm:h-[40px] bg-white flex items-center justify-between`}
       >
         <input
           type="text"
           id="input"
-          value={inputValue}
+          value={item}
           onChange={handleInputChange}
           placeholder={placeholder}
           className="placeholder:text-gray-700 outline-none w-full"
@@ -101,7 +110,7 @@ const Selector = ({ options, setItem, placeholder }) => {
                       : !open || inputValue.length === 0 ? "hidden" : "block"
                     }`}
                   onClick={() => {
-                    if (item?.name.toLowerCase() !== selected.toLowerCase()) {
+                    if (item?.name.toLowerCase() !== selected?.toLowerCase()) {
                       setSelected(item?.name);
                       setOpen(false);
                       setInputValue(item?.name);

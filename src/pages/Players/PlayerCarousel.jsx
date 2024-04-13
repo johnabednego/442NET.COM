@@ -17,17 +17,17 @@ import vinicius from './assets/vinicius.webp'
 
 
 const data = [
-  { image: messi, firstName: "Lionel", lastName: "Messi" },
-  { image: agogo, firstName: "Junior", lastName: "Agogo" },
-  { image: ayew, firstName: "Dede", lastName: "Ayew" },
-  { image: essien, firstName: "Michael", lastName: "Essien" },
-  { image: jordan, firstName: "Jordan", lastName: "Ayew" },
-  { image: kudus, firstName: "Mohammed", lastName: "Kudus" },
-  { image: mbape, firstName: "Kyllan", lastName: "Mbape" },
-  { image: neymar, firstName: "Neymar", lastName: "Junior" },
-  { image: ronaldinho, firstName: "Ronaldinho", lastName: "de Assis" },
-  { image: ronaldo, firstName: "Christiano", lastName: "Ronaldo" },
-  { image: vinicius, firstName: "Vinicius", lastName: "Junior" },
+  {id: 0,  image: messi, firstName: "Lionel", lastName: "Messi" },
+  {id: 1, image: agogo, firstName: "Junior", lastName: "Agogo" },
+  {id: 2, image: ayew, firstName: "Dede", lastName: "Ayew" },
+  {id: 3, image: essien, firstName: "Michael", lastName: "Essien" },
+  {id: 4,  image: jordan, firstName: "Jordan", lastName: "Ayew" },
+  {id: 5,  image: kudus, firstName: "Mohammed", lastName: "Kudus" },
+  {id: 6,  image: mbape, firstName: "Kyllan", lastName: "Mbape" },
+  {id: 7,  image: neymar, firstName: "Neymar", lastName: "Junior" },
+  {id: 8,  image: ronaldinho, firstName: "Ronaldinho", lastName: "de Assis" },
+  {id: 9,  image: ronaldo, firstName: "Christiano", lastName: "Ronaldo" },
+  {id: 10, image: vinicius, firstName: "Vinicius", lastName: "Junior" },
 ]
 
 const PlayerCarousel = () => {
@@ -72,8 +72,8 @@ const PlayerCarousel = () => {
         {/**Other Images */}
         <div className=' w-full h-[150px] md:h-[300px] xl:h-[410px] flex flex-wrap gap-[10px] overflow-hidden justify-center md:justify-normal'>
           {data.slice(currentIndex + 1).map((item, index) => (
-            <div key={index} className='relative w-[150px] h-[150px] xl:w-[200px] xl:h-[200px]'>
-              <img src={item.image} alt={`${item.firstName} ${item.lastName}`} className='w-full h-full border-solid border-[1px] border-[#011B2B] object-cover object-top' />
+            <div onClick={()=>setCurrentIndex(item.id)} key={index} className=' transform duration-300 ease-in-out hover:scale-105 cursor-pointer relative w-[150px] h-[150px] xl:w-[200px] xl:h-[200px]'>
+              <img src={item.image} alt={`${item.firstName} ${item.lastName}`} className=' w-full h-full border-solid border-[1px] border-[#011B2B] object-cover object-top' />
               <div className='w-full absolute -mt-[32px] xl:-mt-[40px] bg-[#011B2B] font-medium text-[14px] xl:text-[16px] text-[#FFFFFF] flex items-center justify-center text-center p-1 xl:p-[7px] shadow-net'>
                 <h1>{item.firstName[0]}. {item.lastName}</h1>
               </div>

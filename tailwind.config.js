@@ -16,6 +16,7 @@ export default {
         mainCategory: 'inset 0 4px 4px 0 rgba(1, 255, 255, 1)',
         ourFriends: '0 4px 4px 0 rgba(1, 27, 43, 1)',
         card: '0 4px 4px 0 rgba(170, 170, 170, 1)',
+        filter: '0 10px 18px 0 rgba(0, 0, 0, 0.75)',
 
       },
       screens: {
