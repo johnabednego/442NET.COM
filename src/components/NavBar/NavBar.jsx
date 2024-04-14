@@ -20,6 +20,13 @@ const NavBar = () => {
     const [mobileMenu, setMobileMenu] = useState(false)
     const [animationClass, setAnimationClass] = useState('');
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // For smooth scrolling
+        });
+    };
+
     const hideModal = (event) => {
         const modal = document.getElementById('modal');
         // Check if the clicked element is outside of the modal
@@ -74,7 +81,8 @@ const NavBar = () => {
             default:
                 setNavSwitch(0)
         }
-    })
+        scrollToTop()
+    }, [])
     return (
         <div className=' z-30 fixed top-0 w-full h-[120px] bg-[#011B2B] flex items-center justify-between px-[20px] xm:px-[30px] sm:px-[50px] py-[20px]'>
             {/**Logo and Name*/}
