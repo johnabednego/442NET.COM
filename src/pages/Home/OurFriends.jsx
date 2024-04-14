@@ -66,9 +66,9 @@ const OurFriends = () => {
 
     return (
         <div className=' w-full flex flex-col mt-[200px]'>
-            <h1 className=' w-full font-semibold flex items-center justify-center text-center text-[26px] sm:text-[30px] text-[#011B2B]'>Our Friends</h1>
+            <h1 data-aos="zoom-in" data-aos-duration="3000" className=' w-full font-semibold flex items-center justify-center text-center text-[26px] sm:text-[30px] text-[#011B2B]'>Our Friends</h1>
 
-            <div className='w-full mt-[50px] flex flex-col gap-[80px]'>
+            <div data-aos="flip-right" data-aos-duration="3000" className='w-full mt-[50px] flex flex-col gap-[80px]'>
                 <div className="parent">
                     <Carousel
                         responsive={responsive}

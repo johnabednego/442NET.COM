@@ -56,7 +56,7 @@ const PlayerCarousel = () => {
       <div className='w-full flex flex-col md:flex-row gap-[10px] xl:gap-[1%] justify-between'>
         {/**Main Image */}
         <div className=' relative w-full h-[300px] xm:h-[350px] sm:h-[410px]  md:h-[300px] xl:max-w-[650px] xl:h-[410px]'>
-          <img src={currentImage} alt={currentName} className='w-full h-full border-solid border-[1px] border-[#011B2B] object-cover object-top' />
+          <img data-aos="zoom-in" data-aos-duration="3000" src={currentImage} alt={currentName} className='w-full h-full border-solid border-[1px] border-[#011B2B] object-cover object-top' />
           <div className={` -mt-[225px] absolute w-full flex justify-between px-[20px]`}>
             {currentIndex !== 0 ? <button onClick={goPrev} className=' w-[40px] h-[40px]'><img src={prevIcon} alt="PrevIcon" className=' w-full h-full' /></button> : <button  className=' cursor-not-allowed w-[40px] h-[40px]'><img src={prevGrayIcon} alt="PrevGrayIcon" className=' w-full h-full' /></button>}
             {currentIndex + 1 < data?.length ? <button onClick={goNext} className=' w-[40px] h-[40px]'><img src={nextIcon} alt="NextIcon" className=' w-full h-full' /></button> : <button className=' cursor-not-allowed w-[40px] h-[40px]'><img src={nextGrayIcon} alt="NextGrayIcon" className=' w-full h-full' /></button>}

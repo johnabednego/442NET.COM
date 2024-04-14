@@ -12,7 +12,7 @@ const AuthenticationMethods = () => {
         { name: "Face", image: face }
     ]
     return (
-        <div className=' w-full flex flex-col mt-[200px] px-[20px] xm:px-[30px] sm:px-[50px]'>
+        <div data-aos="zoom-in" data-aos-duration="3000" className=' w-full flex flex-col mt-[200px] px-[20px] xm:px-[30px] sm:px-[50px]'>
             <h1 className=' w-full font-semibold flex items-center justify-center text-center text-[26px] sm:text-[30px] text-[#011B2B]'>Authentication</h1>
             <div className=' w-full mt-[50px] flex flex-wrap gap-[100px] items-center justify-center'>
                 {/**Call */}
