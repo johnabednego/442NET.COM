@@ -7,7 +7,7 @@ const PlayersHero = () => {
             <h1 className=' w-full font-semibold flex items-center justify-center text-center text-[26px] sm:text-[30px] text-[#011B2B]'>Football Players</h1>
 
             {/**Info */}
-            <div className=' mt-[50px] relative flex flex-col items-center justify-center'>
+            <div data-aos="zoom-in" data-aos-duration="3000" className=' mt-[50px] relative flex flex-col items-center justify-center'>
                 <div className=' z-0 -mb-[100px] md:-mb-[125px]  w-[240px] h-[120px] md:w-[300px] md:h-[150px]  rounded-t-full bg-[#011B2B]' />
 
                 <div className=' player_main_circle flex flex-col'>

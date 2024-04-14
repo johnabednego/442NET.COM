@@ -9,7 +9,7 @@ import FilterPlayers from './FilterPlayers'
 
 const Players = () => {
     return (
-        <div className=' pt-[120px]'>
+        <div  className=' pt-[120px]'>
             <NavBar />
             <Title />
             <PlayersHero />

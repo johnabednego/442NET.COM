@@ -52,7 +52,7 @@ const PlayerCarousel = () => {
 
 
   return (
-    <div className=' w-full px-[20px] xm:px-[30px] sm:px-[50px] mt-[70px]'>
+    <div data-aos="zoom-in" data-aos-duration="3000" className=' w-full px-[20px] xm:px-[30px] sm:px-[50px] mt-[70px]'>
       <div className='w-full flex flex-col md:flex-row gap-[10px] xl:gap-[1%] justify-between'>
         {/**Main Image */}
         <div className=' relative w-full h-[300px] xm:h-[350px] sm:h-[410px]  md:h-[300px] xl:max-w-[650px] xl:h-[410px]'>
