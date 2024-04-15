@@ -64,7 +64,7 @@ const FilterPlayers = () => {
     return (
         <div className=' w-full mt-[100px] px-[20px] xm:px-[30px] sm:px-[50px]'>
             {/**Filter */}
-            <div data-aos="zoom-in" data-aos-duration="3000"  className='w-full flex flex-col items-center justify-center gap-4 '>
+            <div data-aos="zoom-in" data-aos-duration="3000"  className=' relative z-10 w-full flex flex-col items-center justify-center gap-4 '>
                 <div className='w-full flex flex-col gap-[30px] items-center justify-center'>
                     <h1 className=' w-full font-semibold flex items-center justify-center text-center text-[26px] sm:text-[30px] text-[#011B2B]'>Filter Players</h1>
                     <div className=' w-full flex flex-wrap items-center justify-center gap-[10px]'>
@@ -81,7 +81,7 @@ const FilterPlayers = () => {
             </div>
 
             {/**Players */}
-            <div data-aos="flip-right" data-aos-duration="3000" className=' relative -z-10 w-full flex items-center justify-center flex-wrap gap-[15px] mt-[50px]'>
+            <div data-aos="flip-right" data-aos-duration="3000" className=' relative z-0 w-full flex items-center justify-center flex-wrap gap-[15px] mt-[50px]'>
 
                 {filteredPlayers.map((item, index) => (
                     <div key={index} className=' transform duration-300 ease-in-out hover:scale-105 font-semibold text-[12px] w-[200px] h-[280px] lg:w-[220px] lg:h-[300px] xl:w-[240px] xl:h-[322px] flex flex-col gap-[10px] items-center border-solid border-[1px] border-[#011B2B] rounded-[5px] px-[20px] py-[10px]'>
