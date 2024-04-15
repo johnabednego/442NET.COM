@@ -81,10 +81,10 @@ const FilterPlayers = () => {
             </div>
 
             {/**Players */}
-            <div data-aos="flip-right" data-aos-duration="3000" className=' w-full flex items-center justify-center flex-wrap gap-[15px] mt-[50px]'>
+            <div data-aos="flip-right" data-aos-duration="3000" className=' relative -z-10 w-full flex items-center justify-center flex-wrap gap-[15px] mt-[50px]'>
 
                 {filteredPlayers.map((item, index) => (
-                    <div className=' transform duration-300 ease-in-out hover:scale-105 font-semibold text-[12px] w-[200px] h-[280px] lg:w-[220px] lg:h-[300px] xl:w-[240px] xl:h-[322px] flex flex-col gap-[10px] items-center border-solid border-[1px] border-[#011B2B] rounded-[5px] px-[20px] py-[10px]'>
+                    <div key={index} className=' transform duration-300 ease-in-out hover:scale-105 font-semibold text-[12px] w-[200px] h-[280px] lg:w-[220px] lg:h-[300px] xl:w-[240px] xl:h-[322px] flex flex-col gap-[10px] items-center border-solid border-[1px] border-[#011B2B] rounded-[5px] px-[20px] py-[10px]'>
                         {/**Id*/}
                         <div className=' w-full flex gap-[10px] items-center justify-end'>
                             <img src={item.verification ? verified : unVerified} alt="verification" className=' w-[27px] h-[27px]' />
