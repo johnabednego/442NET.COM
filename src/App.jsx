@@ -9,12 +9,18 @@ import Personnel from "./pages/Personnel/Personnel";
 import Tournaments from "./pages/Tournaments/Tournaments";
 import Market from "./pages/Market/Market";
 import AcademiesAndClubs from "./pages/AcademiesAndClubs/AcademiesAndClubs";
+import { useSelector } from "react-redux";
+import LogInModal from "./components/LogIn/LogInModal";
 
 function App() {
   useEffect(() => {
     Aos.init();
   });
+
+  const logInModalValue = useSelector((state)=>state.logInModal.value);
+
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
@@ -27,6 +33,8 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    {logInModalValue?<LogInModal/>:null}
+    </>
   )
 }
 

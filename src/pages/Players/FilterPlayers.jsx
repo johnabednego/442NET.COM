@@ -14,6 +14,7 @@ import neymar from './assets/neymar.webp'
 import ronaldinho from './assets/ronaldinho.webp'
 import ronaldo from './assets/ronaldo.webp'
 import vinicius from './assets/vinicius.webp'
+import ViewPlayerModal from './ViewPlayer/ViewPlayerModal'
 
 
 const players = [
@@ -36,6 +37,9 @@ const FilterPlayers = () => {
     const [gender, setGender] = useState("")
     const [division, setDivision] = useState("")
     const [country, setCountry] = useState("")
+
+    //view player
+    const [viewPlayer, setViewPlayer] = useState(null)
 
     const resetFilter = () => {
         setFilteredPlayers(players)
@@ -63,6 +67,7 @@ const FilterPlayers = () => {
 
     return (
         <div className=' w-full mt-[100px] px-[20px] xm:px-[30px] sm:px-[50px]'>
+            {viewPlayer?<ViewPlayerModal/>:null}
             {/**Filter */}
             <div data-aos="zoom-in" data-aos-duration="3000"  className=' relative z-10 w-full flex flex-col items-center justify-center gap-4 '>
                 <div className='w-full flex flex-col gap-[30px] items-center justify-center'>
