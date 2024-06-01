@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EmailAndPassword from "./EmailAndPassword";
 import errorIcon from "../assets/errorIcon.svg"
+import FacialRecognition from "./FacialRecognition";
 
 const LogIn = () => {
     const [errorMessage, setErrorMessage] = useState("")
@@ -11,7 +12,7 @@ const LogIn = () => {
         <div
             data-aos="zoom-in"
             data-aos-duration="3000"
-            className={` ${errorMessage===""?" gap-[60px] sm:gap-[86px]":"30px"} w-[90%] xm:w-[480px] sm:w-[530px] h-full min-h-[450px] flex flex-col justify-between bg-[#011B2B] p-[30px] rounded-tl-[30px] rounded-br-[30px] border-solid border-y-[1px] border-y-[#01FFFF] shadow-net`} >
+            className={` ${errorMessage === "" ? " gap-[60px] sm:gap-[86px]" : "30px"} w-[90%] xm:w-[480px] sm:w-[530px] h-full min-h-[450px] flex flex-col justify-between bg-[#011B2B] p-[30px] rounded-tl-[30px] rounded-br-[30px] border-solid border-y-[1px] border-y-[#01FFFF] shadow-net`} >
             {/**Title and Roles*/}
             <div className="w-full flex flex-col gap-[20px]">
                 <h1 className=" font-medium text-white text-[18px] sm:text-[22px]">
@@ -114,13 +115,13 @@ const LogIn = () => {
 
             {/**Error */}
             {errorMessage !== "" ?
-                <div  data-aos="fade-up" data-aos-duration="3000" className=" transition-all ease-in-out duration-300 w-full flex items-center justify-center">
+                <div data-aos="fade-up" data-aos-duration="3000" className=" transition-all ease-in-out duration-300 w-full flex items-center justify-center">
                     <div className="px-[10px] h-[26px] rounded-[20px] flex gap-[10px] items-center bg-[#F9AAB6] border-solid border-[1px] border-[#EB0728] shadow-net">
                         <img src={errorIcon} alt="errorIcon" className=" w-[18px] h-[18px]" />
                         <p className=" text-[12px] text-[#EB0728]">{errorMessage}</p>
                     </div>
-                </div> : 
-            null}
+                </div> :
+                null}
 
             <div className="w-full flex flex-col gap-[30px]">
                 {/**Methods*/}
@@ -196,10 +197,9 @@ const LogIn = () => {
 
                 {/**Fields */}
                 {/**Email and Pasword */}
-                {method === "email" ?
-                    <div data-aos="zoom-in" data-aos-duration="3000" className="w-full"><EmailAndPassword setErrorMessage={setErrorMessage} /></div>
-                    :
-                    null}
+                {method === "email" ? <div data-aos="zoom-in" data-aos-duration="3000" className="w-full"><EmailAndPassword setErrorMessage={setErrorMessage} /></div> : null}
+                {/**Facial Recognition */}
+                {method === "face" ? <div data-aos="zoom-in" data-aos-duration="3000" className="w-full"><FacialRecognition setErrorMessage={setErrorMessage} /></div> : null}
             </div>
         </div>
     );

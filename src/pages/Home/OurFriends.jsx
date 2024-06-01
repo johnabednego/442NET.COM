@@ -81,9 +81,9 @@ const OurFriends = () => {
                         dotListClass="custom-dot-list-style"
                     >
                         {
-                            data.map(item => {
+                            data.map((item, index) => {
                                 return (
-                                    <div className=' slider  flex flex-col gap-[18px] border-solid border-[#011B2B] border-[2px] border-b-0 rounded-xl'>
+                                    <div key={index} className=' slider  flex flex-col gap-[18px] border-solid border-[#011B2B] border-[2px] border-b-0 rounded-xl'>
                                         <img src={item.image} alt={`${item.image}`} className=' w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] object-fill' />
                                         <div className=' w-[100px] sm:w-[150px] md:w-[200px] h-[21px] rounded-b-[400px] shadow-ourFriends' />
                                     </div>

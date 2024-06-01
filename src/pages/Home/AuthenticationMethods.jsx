@@ -17,9 +17,9 @@ const AuthenticationMethods = () => {
             <div className=' w-full mt-[50px] flex flex-wrap gap-[100px] items-center justify-center'>
                 {/**Call */}
                 {
-                    data.map(item => {
+                    data.map((item, index) => {
                         return (
-                            <div className='flex flex-col gap-[20px] items-center text-center justify-center'>
+                            <div key={index} className='flex flex-col gap-[20px] items-center text-center justify-center'>
                                 <img src={item.image} alt="mic" className=' w-[100px] h-[100px] md:w-[150px] sm:h-[150px] lg:w-[200px] lg:h-[200px] xl:w-[235px] xl:h-[235px]' />
                                 <h1 className=' font-bold text-[16px] sm:text-[20px] text-[#011B2B]'>{item.name}</h1>
                             </div>

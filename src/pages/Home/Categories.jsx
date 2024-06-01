@@ -16,10 +16,10 @@ const Categories = () => {
         <div className=' w-full flex flex-wrap gap-[100px] items-center justify-center text-center mt-[60px]'>
             {/** */}
             {
-                data?.map(item => {
+                data?.map((item, index) => {
 
                     return (
-                        <div data-aos="flip-right" data-aos-duration="3000" className=' flex flex-col items-center justify-center gap-[30px]'>
+                        <div key={index} data-aos="flip-right" data-aos-duration="3000" className=' flex flex-col items-center justify-center gap-[30px]'>
                             {/**Info */}
                             <div className='main_circle relative flex flex-col items-center justify-center'>
                                 <div className=' circle  font-medium text-[16px] md:text-[20px]  px-[2px] z-20  w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex flex-col gap-4 items-center justify-center text-center rounded-full bg-[#011B2B] shadow-category '>
