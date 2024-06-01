@@ -209,7 +209,7 @@ const NavBar = () => {
             {/**Links */}
             <div className="px-[50px]">
               <div className="w-full flex items-center justify-end mt-4">
-                <button onClick={()=>dispatch(LogInTrue())} className=" hover:scale-90 hover:border-[#FFC000] hover:text-[#FFC000] transition-all ease-in-out duration-300 px-[20px] h-[40px] flex justify-center items-center text-center font-medium text-[22px] text-[#01FFFF] rounded-[40px] shadow-net border-solid border-[1px] border-[#01FFFF]">
+                <button onClick={()=>{setMobileMenu(false); dispatch(LogInTrue())}} className=" hover:scale-90 hover:border-[#FFC000] hover:text-[#FFC000] transition-all ease-in-out duration-300 px-[20px] h-[40px] flex justify-center items-center text-center font-medium text-[22px] text-[#01FFFF] rounded-[40px] shadow-net border-solid border-[1px] border-[#01FFFF]">
                   <span>LogIn</span>
                 </button>
               </div>

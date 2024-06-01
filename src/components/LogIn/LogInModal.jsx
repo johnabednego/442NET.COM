@@ -24,7 +24,7 @@ const LogInModal = () => {
         onClick={hideModal}
         className="cursor-pointer h-full justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[70] outline-none focus:outline-none scrollbar-hide"
       >
-        <div id="modal" className="relative cursor-default" onClick={stopPropagation}>
+        <div id="modal" className="relative cursor-default w-full flex items-center justify-center" onClick={stopPropagation}>
           {/*content*/}
           <LogIn />
         </div>

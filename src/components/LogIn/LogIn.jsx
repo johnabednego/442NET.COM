@@ -11,14 +11,13 @@ const LogIn = () => {
         <div
             data-aos="zoom-in"
             data-aos-duration="3000"
-            className=" w-[530px] h-full min-h-[450px] flex flex-col justify-between bg-[#011B2B] p-[30px] rounded-tl-[30px] rounded-br-[30px]"
-        >
+            className={` ${errorMessage===""?" gap-[60px] sm:gap-[86px]":"30px"} w-[90%] xm:w-[480px] sm:w-[530px] h-full min-h-[450px] flex flex-col justify-between bg-[#011B2B] p-[30px] rounded-tl-[30px] rounded-br-[30px] border-solid border-y-[1px] border-y-[#01FFFF] shadow-net`} >
             {/**Title and Roles*/}
             <div className="w-full flex flex-col gap-[20px]">
-                <h1 className=" font-medium text-white text-[22px]">
+                <h1 className=" font-medium text-white text-[18px] sm:text-[22px]">
                     Welcome to 442NET.COM
                 </h1>
-                <div className="w-full flex flex-wrap items-center justify-between">
+                <div className="w-full flex flex-wrap gap-4 items-center justify-center sm:justify-between">
                     {/**Admin */}
                     <div
                         onClick={() => setRole("admin")}
@@ -125,7 +124,7 @@ const LogIn = () => {
 
             <div className="w-full flex flex-col gap-[30px]">
                 {/**Methods*/}
-                <div className="w-full flex flex-wrap items-center justify-between">
+                <div className="w-full flex flex-wrap gap-4 items-center justify-center sm:justify-between">
                     {/**Email */}
                     <div
                         onClick={() => setMethod("email")}
