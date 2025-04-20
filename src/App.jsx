@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          {isLoggedIn ? (<Route path="/dashboard" element={<Dashboard />} />) : null}
+          {isLoggedIn ? (<Route path="/dashboard/*" element={<Dashboard />} />) : null}
           <Route path="/about" element={<About />} />
           <Route path="/academies&clubs" element={<AcademiesAndClubs />} />
           <Route path="/players" element={<Players />} />
@@ -46,9 +46,10 @@ function App() {
           <Route path="/market" element={<Market />} />
 
         </Routes>
+        {logInModalValue ? <LogInModal /> : null}
+        {signUpModalValue ? <SignUpModal /> : null}
       </BrowserRouter>
-      {logInModalValue ? <LogInModal /> : null}
-      {signUpModalValue ? <SignUpModal /> : null}
+
     </>
   )
 }

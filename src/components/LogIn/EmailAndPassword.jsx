@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import baseUrl from "../baseUrl";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { LogInFalse } from "../../redux/features/navbar/logInModalSlice";
+import { useDispatch } from "react-redux";
 
 const EmailAndPassword = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -24,9 +30,9 @@ const EmailAndPassword = () => {
 
       toast.success("Login successful!");
 
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
+      dispatch(LogInFalse())
+      navigate('/dashboard')
+      window.location.reload()
     } catch (err) {
       const backendErrors = err?.response?.data?.errors;
 

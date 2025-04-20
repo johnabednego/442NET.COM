@@ -58,6 +58,9 @@ const NavBar = () => {
         setNavSwitch(0);
     }
 
+    if(path.startsWith("/dashboard")){
+      setNavSwitch(-1);
+    }
     const token = localStorage.getItem("token");
     setIsLoggedIn(!!token);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -66,6 +69,7 @@ const NavBar = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
+    navigate('/')
     window.location.reload();
   };
 
