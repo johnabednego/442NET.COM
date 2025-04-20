@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -11,29 +11,44 @@ import Market from "./pages/Market/Market";
 import AcademiesAndClubs from "./pages/AcademiesAndClubs/AcademiesAndClubs";
 import { useSelector } from "react-redux";
 import LogInModal from "./components/LogIn/LogInModal";
+import { Toaster } from 'react-hot-toast';
+import SignUpModal from "./components/SignUp/SignUpModal";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   useEffect(() => {
     Aos.init();
   });
 
-  const logInModalValue = useSelector((state)=>state.logInModal.value);
+  // Check login state
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
+
+  const logInModalValue = useSelector((state) => state.logInModal.value);
+  const signUpModalValue = useSelector((state) => state.signUpModal.value);
 
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/academies&clubs" element={<AcademiesAndClubs />} />
-        <Route path="/players" element={<Players />} />
-        <Route path="/personnel" element={<Personnel />} />
-        <Route path="/tournaments" element={<Tournaments />} />
-        <Route path="/market" element={<Market />} />
+      <Toaster position="top-right" />
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          {isLoggedIn ? (<Route path="/dashboard" element={<Dashboard />} />) : null}
+          <Route path="/about" element={<About />} />
+          <Route path="/academies&clubs" element={<AcademiesAndClubs />} />
+          <Route path="/players" element={<Players />} />
+          <Route path="/personnel" element={<Personnel />} />
+          <Route path="/tournaments" element={<Tournaments />} />
+          <Route path="/market" element={<Market />} />
 
-      </Routes>
-    </BrowserRouter>
-    {logInModalValue?<LogInModal/>:null}
+        </Routes>
+      </BrowserRouter>
+      {logInModalValue ? <LogInModal /> : null}
+      {signUpModalValue ? <SignUpModal /> : null}
     </>
   )
 }
